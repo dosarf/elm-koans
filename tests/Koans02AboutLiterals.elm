@@ -9,19 +9,19 @@ testSuite =
     describe "About Literals"
         [ test "strings are enclosed in double quotes" <|
             \() ->
-                x____replace me____x
+                "A string"
                     |> Expect.equal "A string"
         , test "characters are enclosed in single quotes" <|
             \() ->
-                x____replace me____x
+                'A'
                     |> Expect.equal 'A'
         , test "floats have a decimal" <|
             \() ->
-                x____replace me____x
+                42.24
                     |> Expect.within (Expect.Absolute 0.0001) 42.24
         , test "integers do not" <|
             \() ->
-                x____replace me____x
+                42
                     |> Expect.equal 42
         , test "number literals can be integers" <|
             let
@@ -30,7 +30,7 @@ testSuite =
                     42
             in
             \() ->
-                x____replace me____x
+                42
                     |> Expect.equal num
         , test "number literals can be floats" <|
             let
@@ -39,7 +39,7 @@ testSuite =
                     42.0
             in
             \() ->
-                x____replace me____x
+                42.0
                     |> Expect.within (Expect.Absolute 0.0001) num
         , test "floats can be expected to be within an absolute range" <|
             let
@@ -61,6 +61,6 @@ testSuite =
                     |> Expect.within (Expect.Relative 0.01) num
         , test "lists are denoted by brackets" <|
             \() ->
-                x____replace me____x
+                [ 1, 2, 3 ]
                     |> Expect.equal [ 1, 2, 3 ]
         ]
