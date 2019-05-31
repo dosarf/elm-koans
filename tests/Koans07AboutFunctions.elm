@@ -89,10 +89,10 @@ testSuite =
                     |> Expect.equal ((subtract4 >> multiplyBy2) 9)
         , test "operators can be used as functions, too" <|
             \() ->
-                x____replace me____x
+                10
                     |> Expect.equal ((+) 6 4)
         , test "they are really functions" <|
             \() ->
-                x____replace me____x
+                True
                     |> Expect.equal (numberBiPredicate 4 6)
         ]
